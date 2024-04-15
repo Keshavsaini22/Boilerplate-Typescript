@@ -50,7 +50,6 @@ function Dashboard() {
                 <Box sx={{ fontSize: '25px', fontWeight: '700' }}>All tests</Box>
                 <Alltext />
             </Stack>
-
         </Stack>
     )
 }
