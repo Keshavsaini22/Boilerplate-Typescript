@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-
 const UserSchema = new mongoose.Schema({
     name: {
         type: String
@@ -14,21 +13,19 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    address: {
-        type: Object,
-        properties: {
-            // street: { type: String },
-            city: { type: String },
-            // pincode: { type: Number },
-            country: { type: String }
-        }
+    role: {
+        type: String,
+        enum: ["Student", "Admin",]
     },
-    industry: { type: String },
-    phone: { type: String },
-    website: { type: String },
-    image: { type: String },
-    languages: { type: String },
-    title: { type: String },
-    desc: { type: String },
+    // address: {
+    //     type: Object,
+    //     properties: {
+    //         // street: { type: String },
+    //         city: { type: String },
+    //         // pincode: { type: Number },
+    //         country: { type: String }
+    //     }
+    // },
+   
 }, { timestamps: true })
 module.exports = mongoose.model("users", UserSchema)
